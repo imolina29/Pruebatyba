@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9922326eb48690e79e740a83006df7dbad18210ec44b305cf9850749e20783a9.html">Crear Nuevo Usuario</a></span>
+                > <span class="truncate-60"><a
+                    href="63d40d8c91a8a4d1b9a35e65246480806f6cf0eb73c5389e1321b7d71d652e23.html">Crear nuevo registro </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 19-08-2022 21:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Crear Nuevo Usuario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como un nuevo usuario<br />
+Quiere ingresar a la pagina AdvantageDemo<br />
+Para registrar un usuario
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="7dae764f6f1e9ae9dbc1f8914951b6a561eac9cb8e5ba6b5dae60709ab697927.html">Escenario Crear Registro
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Crear nuevo registro
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="eb5475612ea58e0b82303b3bb3209eab3c29dd4dae9118ad1aaa6da4863beede.png" title=" Dado que Paul accede a la web de Advantage" width="1920"/>
+                <img src="eb5475612ea58e0b82303b3bb3209eab3c29dd4dae9118ad1aaa6da4863beede.png" title=" Paul opens the Home page" width="1920"/>
+                <img src="eb5475612ea58e0b82303b3bb3209eab3c29dd4dae9118ad1aaa6da4863beede.png" title=" Dado que Paul accede a la web de Advantage (completed)" width="1920"/>
+                <img src="26a2d22781f04ec320ddcd89ce6c9d03ce78cfe15ead9249b1c03fdaa1b7a7ff.png" title=" Cuando el introduce sus datos personales
+| username | email | password | confirmPwd | firstName | lastName | phone | country | city | address | state | postalCode |
+| Paul35 | paul35@yahoo.com | Paul2022 | Paul2022 | Paul | Barrios | 3005007070 | Colombia | Monteria | cl 9 123 | Cordoba | 050048 |" width="1920"/>
+                <img src="26a2d22781f04ec320ddcd89ce6c9d03ce78cfe15ead9249b1c03fdaa1b7a7ff.png" title=" Paul acceder" width="1920"/>
+                <img src="26a2d22781f04ec320ddcd89ce6c9d03ce78cfe15ead9249b1c03fdaa1b7a7ff.png" title=" Paul clicks on Click en boton login" width="1920"/>
+                <img src="2f7539e5664ca05c42c906676d1ce3077353dee116e8e32b1b405789aa3700bb.png" title=" Paul clicks on Crear nuevo usuario" width="1920"/>
+                <img src="1f53603f95c4e214ff151f175d0e733402b2abe8624f628ea035841f8271469d.png" title=" Paul clicks on Crear nuevo usuario (completed)" width="1920"/>
+                <img src="b317cce64f1d579658260accfab85c5bfed5ce7660774d66604f7036c1306cbd.png" title=" Paul acceder (completed)" width="1920"/>
+                <img src="b317cce64f1d579658260accfab85c5bfed5ce7660774d66604f7036c1306cbd.png" title=" Paul crear registro" width="1920"/>
+                <img src="b317cce64f1d579658260accfab85c5bfed5ce7660774d66604f7036c1306cbd.png" title=" Paul enters 'Paul35' into Usuario" width="1920"/>
+                <img src="73c490effdd848558c611b373a19c14eea4a673c99e3674ae3ce7c8f1d38037b.png" title=" Paul enters 'Paul35' into Usuario (completed)" width="1920"/>
+                <img src="73c490effdd848558c611b373a19c14eea4a673c99e3674ae3ce7c8f1d38037b.png" title=" Paul enters 'paul35@yahoo.com' into Email usuario" width="1920"/>
+                <img src="c37a03a643662a3949dbb30b82413a2373698c61c7085ac80f55ebac9395228d.png" title=" Paul enters 'paul35@yahoo.com' into Email usuario (completed)" width="1920"/>
+                <img src="c37a03a643662a3949dbb30b82413a2373698c61c7085ac80f55ebac9395228d.png" title=" Paul enters 'Paul2022' into Contrasena usuario" width="1920"/>
+                <img src="33eb87ff72ef36c645a29dc65300b0265e93b22af155f7772ef61b24e737d001.png" title=" Paul enters 'Paul2022' into Contrasena usuario (completed)" width="1920"/>
+                <img src="33eb87ff72ef36c645a29dc65300b0265e93b22af155f7772ef61b24e737d001.png" title=" Paul enters 'Paul2022' into Confirmar Contrasena" width="1920"/>
+                <img src="4d5c123adf31867ba72b02f570ced9c3c2d2ec4db5735c48318faef010363e3a.png" title=" Paul enters 'Paul2022' into Confirmar Contrasena (completed)" width="1920"/>
+                <img src="4d5c123adf31867ba72b02f570ced9c3c2d2ec4db5735c48318faef010363e3a.png" title=" Paul enters 'Paul' into Nombre Usuario" width="1920"/>
+                <img src="45fb756361198773f281d3c12f29923fccd1238a7747da0b1d6948b2850f7091.png" title=" Paul enters 'Paul' into Nombre Usuario (completed)" width="1920"/>
+                <img src="45fb756361198773f281d3c12f29923fccd1238a7747da0b1d6948b2850f7091.png" title=" Paul enters 'Barrios' into Apellido usuario" width="1920"/>
+                <img src="6b2fc870841dc67a8c3dba52fa5cc711023a12374ea975d942f60574f3d6d53f.png" title=" Paul enters 'Barrios' into Apellido usuario (completed)" width="1920"/>
+                <img src="6b2fc870841dc67a8c3dba52fa5cc711023a12374ea975d942f60574f3d6d53f.png" title=" Paul enters '3005007070' into Numero de telefono" width="1920"/>
+                <img src="6c32d6b408bc8214bd2710781e89617e769f2be3ddd5364a5edf2e56ad505c9b.png" title=" Paul enters '3005007070' into Numero de telefono (completed)" width="1920"/>
+                <img src="6c32d6b408bc8214bd2710781e89617e769f2be3ddd5364a5edf2e56ad505c9b.png" title=" Paul select Colombia on Pais usuario" width="1920"/>
+                <img src="fec602a20190fca31b6b7e79887ba8c0a91fd21cb9b8782715b93f2db01f3fbb.png" title=" Paul select Colombia on Pais usuario (completed)" width="1920"/>
+                <img src="fec602a20190fca31b6b7e79887ba8c0a91fd21cb9b8782715b93f2db01f3fbb.png" title=" Paul enters 'Monteria' into Ciudad Usuario" width="1920"/>
+                <img src="89b1e373e06807bcbd95cb531cbe41668820d5ba9c73bc5a8c304aa956bb2785.png" title=" Paul enters 'Monteria' into Ciudad Usuario (completed)" width="1920"/>
+                <img src="89b1e373e06807bcbd95cb531cbe41668820d5ba9c73bc5a8c304aa956bb2785.png" title=" Paul enters 'cl 9 123' into Direccion usuario" width="1920"/>
+                <img src="e047a200d85c9c328bd6a4988d4aa2268951993207e5bc4486a65458df9d7c03.png" title=" Paul enters 'cl 9 123' into Direccion usuario (completed)" width="1920"/>
+                <img src="e047a200d85c9c328bd6a4988d4aa2268951993207e5bc4486a65458df9d7c03.png" title=" Paul enters 'Cordoba' into Estado" width="1920"/>
+                <img src="fb9c0bb2e7387feaa8bcd5208e20c11abbeb7773eaf091d6e08a79db342230fd.png" title=" Paul enters 'Cordoba' into Estado (completed)" width="1920"/>
+                <img src="fb9c0bb2e7387feaa8bcd5208e20c11abbeb7773eaf091d6e08a79db342230fd.png" title=" Paul enters '050048' into Codigo postal" width="1920"/>
+                <img src="739ab4562fe12d8f928895ea3a8c5ef9a7dce4bcf306a21d76b85c494af9fbd9.png" title=" Paul enters '050048' into Codigo postal (completed)" width="1920"/>
+                <img src="e3384c83f34a35f2a3321e12988226d5596a3e1e570507c646540bb8f01de1ce.png" title=" Paul clicks on Check terminos y condiciones" width="1920"/>
+                <img src="d421063183ab0554cf429e2bc8c998feacb32e35e1b6de3aaa7c954a7449bcee.png" title=" Paul clicks on Check terminos y condiciones (completed)" width="1920"/>
+                <img src="d421063183ab0554cf429e2bc8c998feacb32e35e1b6de3aaa7c954a7449bcee.png" title=" Paul clicks on Boton registro" width="1920"/>
+                <img src="b120f4d5234700b2a84127d190c6a72263745dd4e79e3531d42657167b3be99f.png" title=" Paul clicks on Boton registro (completed)" width="1920"/>
+                <img src="b120f4d5234700b2a84127d190c6a72263745dd4e79e3531d42657167b3be99f.png" title=" Paul crear registro (completed)" width="1920"/>
+                <img src="b120f4d5234700b2a84127d190c6a72263745dd4e79e3531d42657167b3be99f.png" title=" Cuando el introduce sus datos personales
+| username | email | password | confirmPwd | firstName | lastName | phone | country | city | address | state | postalCode |
+| Paul35 | paul35@yahoo.com | Paul2022 | Paul2022 | Paul | Barrios | 3005007070 | Colombia | Monteria | cl 9 123 | Cordoba | 050048 | (completed)" width="1920"/>
+                <img src="5b097db3de2600f044f9b3f11a784a019f4230de618361e7ea7401f926b3d3c4.png" title=" Entonces el valida que se creo un nuevo resgistro" width="1920"/>
+                <img src="5b097db3de2600f044f9b3f11a784a019f4230de618361e7ea7401f926b3d3c4.png" title=" Then usuario" width="1920"/>
+                <img src="8d5da06455d4992822e44ebb5c0c93a38835116f9c45dfb69b077674b55d345a.png" title=" Then usuario (completed)" width="1920"/>
+                <img src="8d5da06455d4992822e44ebb5c0c93a38835116f9c45dfb69b077674b55d345a.png" title=" Entonces el valida que se creo un nuevo resgistro (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.4</span>
+</div>
+</body>
+</html>
